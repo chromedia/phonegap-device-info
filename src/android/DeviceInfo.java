@@ -17,8 +17,8 @@ public class DeviceInfo extends CordovaPlugin
 	@Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         if (action.equals("getDeviceManufacturer")) {
-            //callbackContext.success(android.os.Build.MANUFACTURER);
-        	callbackContext.success("KIAM: "+android.os.Build.MANUFACTURER);
+            callbackContext.success(android.os.Build.MANUFACTURER);
+            
             return true;
         }
         return false;
