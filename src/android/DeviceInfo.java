@@ -17,17 +17,10 @@ public class DeviceInfo extends CordovaPlugin
 	@Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         if (action.equals("getDeviceManufacturer")) {
-            this.echo(android.os.Build.MANUFACTURER, callbackContext);
+            //callbackContext.success(android.os.Build.MANUFACTURER);
+        	callbackContext.success("KIAM: "+android.os.Build.MANUFACTURER);
             return true;
         }
         return false;
-    }
-	
-	private void echo(String message, CallbackContext callbackContext) {
-        if (message != null && message.length() > 0) {
-            callbackContext.success(message);
-        } else {
-            callbackContext.error("Expected one non-empty string argument.");
-        }
     }
 }
