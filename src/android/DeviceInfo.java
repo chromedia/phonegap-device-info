@@ -9,6 +9,12 @@ import org.json.JSONObject;
 
 public class DeviceInfo extends CordovaPlugin
 {
+	/**
+     * Constructor.
+     */
+    public DeviceInfo() {
+    }
+    
 	@Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         if (action.equals("echo")) {
